@@ -1,0 +1,120 @@
+:root {
+  --content-width: 900px;
+  --title-size: 26px;
+  --quote-size: 12px;
+
+  --bar-label-size: 18px;
+  --bar-value-size: 20px;
+  --bar-mri: #148195;
+  --bar-ct: #44b0bd;
+  --bar-value: #ffffff;
+  --bar-label: #7a7a7a;
+
+  --slider-value-size: 60px;
+
+  /* Slider */
+  --slider-background: #e5e5e5;
+  --slider-background-fill: #43afbb;
+  --slider-track-height: 10px;
+  --slider-track-border-radius: 5px;
+  --slider-thumb-size: 30px;
+  --slider-thumb-radius: 15px;
+  --slider-thumb-background: #ffffff;
+  --slider-thumb-shadow: #bababa;
+}
+
+.slider-bars {
+  font-family: "Roboto", Helvetica, sans-serif;
+  display: flex;
+  align-content: flex-start;
+  width: var(--content-width);
+}
+
+.slider-bars h1 {
+  font-size: var(--title-size);
+}
+
+.slider {
+  display: inline-block;
+  margin: 65px 30px 0 30px;
+  width: 50%;
+}
+
+.slider h1 {
+  margin-bottom: 5px;
+}
+
+.slider .slider-value {
+  font-weight: bold;
+  font-size: var(--slider-value-size);
+  margin: 0px 0 15px 0;
+}
+
+.slider .slider-quote {
+  font-size: var(--quote-size);
+  margin: 30px 0 0 0;
+}
+
+.bars {
+  display: inline-block;
+  margin: 0 30px;
+  width: 50%;
+}
+
+.bars h1 {
+  text-align: center;
+}
+
+.bar-item {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.bar-item .bar-value,
+.bar-item .bar-label {
+  display: inline-block;
+}
+
+.bar-item .bar-value {
+  font-size: var(--bar-value-size);
+  font-weight: 500;
+  text-align: right;
+  padding: 15px 10px;
+  color: var(--bar-value);
+  max-width: 54%;
+  min-width: 85px;
+}
+
+.bar-item .bar-label {
+  font-size: var(--bar-label-size);
+  color: var(--bar-label);
+  padding-left: 15px;
+}
+
+.bar-item.bar-mri .bar-value {
+  background-color: var(--bar-mri);
+}
+
+.bar-item.bar-ct .bar-value {
+  background-color: var(--bar-ct);
+}
+
+@media all and (max-width: 960px) {
+  .slider-bars {
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+  }
+
+  .slider,
+  .bars {
+    width: 100%;
+    margin: 0;
+  }
+
+  .bars {
+    margin-top: 50px;
+  }
+}
